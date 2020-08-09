@@ -35,14 +35,19 @@ function togglePopup(popup) {
     }
 }
 
+
+
 const closeEscape = (evt) => {
     const activePopup = document.querySelector('.popup_active')
     if (evt.key === "Escape") {
         activePopup.classList.remove('popup_active');
+        document.removeEventListener('keydown', closeEscape);
+
 
     }
 
 }
+
 
 imagePopupCloseButton.addEventListener('click', function(e) {
     e.stopPropagation();
@@ -55,7 +60,7 @@ const showCard = (e) => {
     togglePopup(imagePopup);
     imagePopup.querySelector('.popup-image__image').src = e.target.src;
     imagePopup.querySelector('.popup-image__text').textContent = e.target.nextElementSibling.querySelector('.element-grid__text').textContent;
-    imagePopupCloseButton.addEventListener('click', togglePopup);
+
 }
 
 
