@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="shortcut icon" href="#" />
+  <title>Mesto</title>
+</head>
+<body class="page">
+  <div class="root">
+    <header class="header">
+      <img src="./images/logo.svg" alt="лого" class="header__logo">
+    </header>
+
+    <main class="main">
+      <section class="profile">
+        <img src="./images/profile-pic.jpg" alt="Ваша фотокарточка" class="profile__avatar">
+
+        <div class="profile__info">
+          <div class="profile__title">
+            <h1 class="profile__name">Глушков Валерий</h1>
+            <button class="profile__edit-button" type="button" ></button>  
+          </div>
+          
+          <p class="profile__job">Джаваскриптизер</p>
+          
+        </div>
+        
+        <button class="profile__add-button" type="button" ></button>
+      </section>
+
+      <section class="elements" aria-label="гриды">
+        <ul class="element-grid"></ul>
+      </section>
+    </main>
+
+
+    <template id="photo-elements-template">
+      <li class="element-grid__element">
+      
+        <img class=" element-grid__image" alt="">
+                  
+       
+          <div class="element-grid__text-block">
+            <h2 class=" element-grid__text"></h2>
+         
+  
+          <button class="element-grid__delete-button" type="button" ></button>
+          <button class="element-grid__like-button" type="button" ></button>
+        </div>
+      </li>
+    </template>
+
+    <footer class="footer">
+      <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+    </footer>
+
+    <section class="popup edit-popup">
+      <div class="popup__container">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        
+        <form  class="popup__form"  >
+          <input type="text" name="profile-name" id="nameinput" placeholder="Ваше имя" class="popup__input" required minlength="2" maxlength="40" >
+          <p class='popup__input-error' id="profile-name-error"></p>
+          
+          <input type="text" name="profile-job" id="jobinput" placeholder="Ваша профессия" class="popup__input" required minlength="2" maxlength="200" >
+          <p class='popup__input-error' id="profile-job-error"></p>
+          
+          <button type="submit" class="popup__save-button">Сохранить</button>
+        </form>
+
+        <button class="popup__close-button" type="button" ></button>
+      </div>
+    </section>
+
+    <section class="popup add-popup" aria-label="попап"> 
+      <div class="popup__container">
+        <h2 class="popup__title">Новое место</h2>
+        
+        <form  class="popup__form"  >
+          <input type="text" name="place-name" id="placeinput" placeholder="Название" class="popup__input" required minlength="1" maxlength="30" >
+          <p class="popup__input-error" id="place-name-error"></p>
+          
+          <input type="url" name="place-link" id="linkinput" placeholder="Ссылка на картинку" class="popup__input" required>
+          <p class="popup__input-error" id="place-link-error"></p>
+
+          <button type="submit" class="popup__save-button popup__save-button_disabled" disabled>Сохранить</button>
+        </form>
+
+        <button class="popup__close-button" type="button" ></button>
+      </div>
+    </section>
+
+    <section class="popup-image popup " aria-label="попап">
+      <div class="popup-image__container">
+          <div class="popup-image__picture">
+              <img alt="" class="popup-image__image" src="#">
+              <div class="popup-image__text"></div>
+          </div>
+
+          <button class="popup-image__close-button" type="button"></button>
+      </div>
+  </section>
+  </div>
+
+  <script src="./js/initialCards.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/validate.js"></script>
+</body>
+</html>

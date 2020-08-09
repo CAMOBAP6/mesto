@@ -1,0 +1,23 @@
+@import url(./__element/element-grid__element.css);
+@import url(./__text-block/element-grid__text-block.css);
+@import url(./__text/element-grid__text.css);
+.element-grid {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 20px 18px;
+  grid-template-columns: repeat(auto-fit, 282px)
+}
+
+@media screen and (max-width: 883px) {
+  .element-grid {
+      max-width: 586px;
+      margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 591px) {
+  .element-grid {
+      max-width: 282px;
+  }
+}

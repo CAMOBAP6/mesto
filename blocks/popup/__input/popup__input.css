@@ -1,0 +1,25 @@
+
+.popup__input {
+  border: none;
+  margin: 29.74px 36px 0;
+  padding-bottom: 13.3px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 358px;
+  font-size: 14px;
+  line-height: 17px;
+  outline: none;
+}
+
+.popup__input:nth-of-type(1) {
+  margin-top: 54px;
+}
+
+.popup__input:active {
+  outline: 2px solid blue
+}
+
+@media screen and (max-width:750px) {
+  .popup__input {
+      width: auto;
+  }
+}

@@ -1,0 +1,10 @@
+@import url(./__delete-button/element-grid__delete-button.css);
+@import url(./__image/element-grid__image.css);
+@import url(./__like-button/element-grid__like-button.css);
+
+.elements {
+  max-width: 882px;
+  margin: 76px auto 0;
+  padding: 0;
+}
+
